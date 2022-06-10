@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="ko">
+  <head>
+    <title>한옥,지붕</title>
+	<link type="text/css" href="css/style2.css" rel="stylesheet">
+  </head>
+
+<body>
+ <header>
+	  <ul>
+      <li><a href="index.html" class="active">누각</a></li>
+      <li><a href="main1.html">향교</a></li>
+      <li><a href="index.html">LOGO</a></li>
+      <li><a href="main3.html">가옥</a></li>
+      <li><a href="main2.html">서원</a></li>
+    </ul>
+ </header>
+
+	
+	
+  <section id = "container">
+	  
+	  <h2 id="maintext">가학루</h2>
+	  
+	    <h2 id="main_text1">
+	맞배지붕<br>양 기와가 마주보는 형식의 <br>가장 흔한 방식의 지붕
+	</h2>
+	
+	 <h2 id="main_text2">
+	청단청<br>사당이나 주거용도가 아닌 <br>한옥에서 볼수있는 단청
+	</h2>
+	 
+	 <img src="img/hacksong2.png" id = "roof1" alt="">
+	 <img src="img/hacksong.png" id = "roof2" alt="">
+     <img src="img/hacksong1.png" id = "roof3" alt="">
+	  
+	  <img id="bottom" src="img/bottom.png" alt="">
+  </section>
+	
+	
+	<script>
+		
+	 let roof1 = document.getElementById('roof1');
+	 let roof2 = document.getElementById('roof2');
+	 let roof3 = document.getElementById('roof3');
+	 let roof4 = document.getElementById('roof4');
+     let maintext = document.getElementById('maintext');
+	 let main_text1 = document.getElementById('main_text1');
+	 let main_text2 = document.getElementById('main_text2');
+     let s1 = document.getElementById('s1');
+
+    
+     window.addEventListener('scroll',function(){
+		let value =window.scrollY;
+		 
+		roof1.style.top = value * -0.02 + '%';
+		roof2.style.top = value * 0.003+ '%';
+		roof3.style.top = value * -0.005+ '%';
+		//maintext.style.opacity =  200 - value + '%'  ;
+		main_text1.style.opacity = value + '%';
+		main_text1.style.top = value * -0.02 + '%';
+		 
+		main_text2.style.opacity = value + '%';
+		main_text2.style.top = value * -0.005+ '%';
+		 
+	    s1.style.opacity =  100 - value*3 + '%'  ;
+		 
+	
+	 })
+		
+	</script>
+  </body>
+</html>
+
